@@ -1,340 +1,399 @@
-:root {
-  
-  --portrait-size: 460px;
-  --canvas: #f6f3eb;
-  --paper: #fbfaf6;
-  --navy: #0a1b36;
-  --navy-soft: #17304f;
-  --slate: #56657a;
-  --teal: #12b8a9;
-  --teal-dark: #0b968b;
-  --line: rgba(10, 27, 54, 0.18);
-}
+<!DOCTYPE html>
 
-/* Base reset and global element defaults. */
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  background: var(--canvas);
-  color: var(--navy);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
-a { color: inherit; text-decoration: none; }
-svg { width: 1.1em; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
-/* Shared maximum-width container used by the header and every main page section. */
-.section-shell { width: min(1240px, calc(100% - 64px)); margin-inline: auto; }
+<!-- Main portfolio page for Jonathan Diaz. The page is organized as a single-scroll site with sections for experience, projects, homelab work, technical capabilities, certifications, and contact information. -->
 
-/* Top navigation and wordmark. */
-.site-header {
-  width: min(1240px, calc(100% - 64px));
-  height: 88px;
-  margin-inline: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--line);
-}
-.wordmark { font-size: 1.25rem; font-weight: 760; letter-spacing: -0.03em; }
-nav { display: flex; gap: 38px; }
-nav a { position: relative; font-size: 0.92rem; font-weight: 600; }
-nav a::after { content: ""; position: absolute; left: 50%; right: 50%; bottom: -9px; height: 2px; background: var(--teal); transition: left .18s ease, right .18s ease; }
-nav a:hover::after, nav a:focus-visible::after { left: 0; right: 0; }
+<html lang="en">
 
-/* Hero layout, headline, action buttons, and career fact row. */
-.hero { min-height: 710px; display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(370px, .88fr); gap: 86px; align-items: center; padding-block: 76px 84px; }
-.availability { display: flex; align-items: center; gap: 10px; margin: 0 0 44px; color: var(--navy-soft); font-size: .9rem; font-weight: 600; }
-.availability span { width: 9px; height: 9px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 5px rgba(18,184,169,.1); }
-.eyebrow { margin: 0 0 20px; color: var(--teal-dark); font-size: .76rem; font-weight: 750; letter-spacing: .19em; text-transform: uppercase; }
-h1, h2, h3, p { margin-top: 0; }
-h1 { max-width: 760px; margin-bottom: 26px; font-size: clamp(3.25rem, 5.35vw, 5rem); line-height: .99; letter-spacing: -.06em; font-weight: 760; }
-.hero-summary { max-width: 660px; margin-bottom: 30px; color: var(--slate); font-size: 1.15rem; line-height: 1.65; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
-.button { min-height: 52px; padding: 0 22px; display: inline-flex; align-items: center; justify-content: center; gap: 14px; border: 1px solid var(--teal); border-radius: 7px; font-size: .94rem; font-weight: 680; transition: transform .18s ease, background .18s ease, color .18s ease, box-shadow .18s ease; }
-.button:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(10,27,54,.1); }
-.button-primary { background: var(--teal); color: #fff; }
-.button-primary:hover { background: var(--teal-dark); }
-.button-secondary:hover { background: #e3f6f2; }
-.hero-facts { display: grid; grid-template-columns: .82fr .82fr 1.36fr; margin: 52px 0 0; border-top: 1px solid var(--line); }:root {
-  
-  --portrait-size: 460px;
-  --canvas: #f6f3eb;
-  --paper: #fbfaf6;
-  --navy: #0a1b36;
-  --navy-soft: #17304f;
-  --slate: #56657a;
-  --teal: #12b8a9;
-  --teal-dark: #0b968b;
-  --line: rgba(10, 27, 54, 0.18);
-}
+<head>
+    <!-- Basic page metadata, browser color, favicon, and the external stylesheet used by the site. -->
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta
+        content="Jonathan Diaz is a Senior Systems Administrator and hands-on IT Manager specializing in Microsoft 365, Azure, Windows Server, infrastructure, security, and IT operations."
+        name="description" />
+    <meta content="#f6f3eb" name="theme-color" />
+    <title>Jonathan Diaz | Senior Systems Administrator</title>
+    <link href="./favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="./styles.css" rel="stylesheet" />
+</head>
 
-/* Base reset and global element defaults. */
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  background: var(--canvas);
-  color: var(--navy);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
-a { color: inherit; text-decoration: none; }
-svg { width: 1.1em; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
-/* Shared maximum-width container used by the header and every main page section. */
-.section-shell { width: min(1240px, calc(100% - 64px)); margin-inline: auto; }
+<body>
+    <!-- All visible content is contained inside the main landmark for accessibility and simple navigation. -->
+    <main>
+        <!-- Sticky-style top navigation and site wordmark. Links jump to sections on the same page. -->
+        <header class="site-header">
+            <a aria-label="Jonathan Diaz, home" class="wordmark" href="#top">Jonathan Diaz</a>
+            <nav aria-label="Primary navigation">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#homelab">Homelab</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+        <!-- Hero section: primary positioning statement, resume download, career highlights, and profile image. -->
+        <section class="hero section-shell" id="top">
+            <div class="hero-copy">
+                <p class="availability"><span></span> Miami, FL | Open to senior systems and infrastructure roles</p>
+                <p class="eyebrow">Senior Systems Administrator | Microsoft 365 | Azure | Infrastructure</p>
+                <h1>I build, secure, and simplify the systems businesses depend on.</h1>
+                <p class="hero-summary">Hands-on systems administrator and IT operations owner supporting 75 users
+                    across the United States and India. Focused on Microsoft 365, Azure, Windows infrastructure,
+                    security administration, recovery, and measurable business outcomes.</p>
+                <!-- Primary calls to action: view projects or download the resume PDF stored in the site root. -->
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#projects">
+                        View selected work
+                        <svg aria-hidden="true" viewbox="0 0 24 24">
+                            <path d="M5 12h14M13 6l6 6-6 6"></path>
+                        </svg>
+                    </a>
+                    <a class="button button-secondary" download="" href="./Resume.pdf">
+                        Download Resume
+                        <svg aria-hidden="true" viewbox="0 0 24 24">
+                            <path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14"></path>
+                        </svg>
+                    </a>
+                </div>
+                <!-- Quick facts are marked up as a definition list so the labels and values stay semantically connected. -->
+                <dl aria-label="Career highlights" class="hero-facts">
+                    <div>
+                        <dt>Experience</dt>
+                        <dd>4+ years</dd>
+                    </div>
+                    <div>
+                        <dt>Environment</dt>
+                        <dd>75 users</dd>
+                    </div>
+                    <div>
+                        <dt>Annual savings</dt>
+                        <dd>$128.4K</dd>
+                    </div>
+                </dl>
+            </div>
+            <div class="portrait-wrap">
+                <div aria-hidden="true" class="portrait-backdrop"></div>
+                <img alt="Jonathan Diaz in professional attire" class="portrait" fetchpriority="high" height="1254"
+                    src="./jonathan-diaz-enhanced.jpg" width="1254" />
+                <p class="portrait-caption">Infrastructure that works. Ownership that is clear.</p>
+            </div>
+        </section>
+        <!-- About section: short summary of the environment supported and the balance between hands-on work and operational ownership. -->
+        <section class="about section-shell ruled-section" id="about">
+            <div class="section-label"><span>About</span><span>01</span></div>
+            <div class="about-grid">
+                <h2>Direct technical execution with operational ownership.</h2>
+                <div class="prose">
+                    <p>I serve as the sole internal IT owner for a 75-user CPA firm spanning Coral Gables and India. I
+                        directly administer Microsoft 365, Azure, Active Directory, Windows Server, Azure Virtual
+                        Desktop, networking, endpoint security, backups, and business-critical accounting systems.</p>
+                    <p>My role combines hands-on engineering with technical decision-making: building production
+                        systems, resolving escalated incidents, governing MSP work, validating changes, documenting the
+                        environment, and preventing avoidable cost or risk.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Experience section: current role, scope of responsibility, and the systems directly administered. -->
+        <section class="experience section-shell ruled-section" id="experience">
+            <div class="section-label"><span>Experience</span><span>02</span></div>
+            <div class="experience-grid">
+                <div>
+                    <p class="experience-date">April 2022 - Present</p>
+                    <h2>IT Manager | Systems Administrator</h2>
+                    <p class="company">HLB Gravier LLP | Coral Gables, Florida</p>
+                </div>
+                <ul class="responsibilities">
+                    <li>Own day-to-day IT operations for 75 active users across the United States and India, supporting
+                        approximately 75 Windows laptops, 15 servers, printers, conference-room systems, and
+                        business-critical applications.</li>
+                    <li>Administer 15 Azure VMs, including five Azure Virtual Desktop session hosts, seven application
+                        servers, two domain controllers, and one file server, with responsibility for networking, NSGs,
+                        storage, backups, monitoring, applications, and optimization.</li>
+                    <li>Administer Microsoft 365 E3, Exchange Online, Entra ID, Conditional Access, MFA, Purview
+                        eDiscovery, Active Directory, Group Policy, Windows Server, DNS, DHCP, IIS, and
+                        certificate-based access.</li>
+                    <li>Serve as the primary escalation point for major incidents, direct MSP priorities, validate
+                        completed work, and coordinate approximately 20 software vendors plus telecom and hardware
+                        providers.</li>
+                    <li>Maintain IT Glue documentation covering 341 passwords, 76 documents, and 257 configurations,
+                        including diagrams, inventories, runbooks, recovery procedures, renewals, and change plans.</li>
+                </ul>
+            </div>
+        </section>
+        <!-- Selected projects section: measurable infrastructure, migration, recovery, security, and telephony work. -->
+        <section class="projects section-shell ruled-section" id="projects">
+            <div class="section-label"><span>Selected work</span><span>03</span></div>
+            <div class="projects-intro">
+                <h2>Selected infrastructure and operations results.</h2>
+                <p>Projects where technical implementation, risk control, and business impact mattered.</p>
+            </div>
+            <!-- Each project uses the same structure: project number, description and outcome, followed by a short technology tag list. -->
+            <div class="project-list">
+                <article class="project"><span class="project-number">01</span>
+                    <div class="project-main">
+                        <h3>Azure infrastructure migration &amp; legacy retirement</h3>
+                        <p>Built and migrated seven production workloads to Azure, retired seven legacy VMs, and
+                            replaced one platform with SaaS. Configured VMs, disks, VNets, subnets, NSGs, domain
+                            integration, backups, monitoring, applications, and cutover.</p>
+                        <p class="project-outcome">Reduced legacy infrastructure and helped eliminate $128,400 in annual
+                            recurring technology costs across Zscaler, Nutanix, Right Networks, and Duo.</p>
+                    </div>
+                    <ul aria-label="Azure infrastructure migration &amp; legacy retirement technologies"
+                        class="project-tags">
+                        <li>Azure VMs</li>
+                        <li>Windows Server</li>
+                        <li>Cost reduction</li>
+                    </ul>
+                </article>
+                <article class="project"><span class="project-number">02</span>
+                    <div class="project-main">
+                        <h3>Azure Virtual Desktop engineering</h3>
+                        <p>Created host pools, workspaces, application groups, session hosts, Entra groups, user
+                            assignments, networking, Conditional Access, monitoring, backups, and application
+                            deployments for production and isolated client-access use cases.</p>
+                        <p class="project-outcome">Resolved an AVD capacity issue affecting five users and corrected a
+                            stale resource assignment without unnecessary endpoint changes.</p>
+                    </div>
+                    <ul aria-label="Azure Virtual Desktop engineering technologies" class="project-tags">
+                        <li>Azure Virtual Desktop</li>
+                        <li>Entra ID</li>
+                        <li>Conditional Access</li>
+                    </ul>
+                </article>
+                <article class="project"><span class="project-number">03</span>
+                    <div class="project-main">
+                        <h3>Box-to-SharePoint architecture</h3>
+                        <p>Own information architecture and migration planning for Tax, Audit, Admin, and IT. Reduced
+                            the source dataset from 3.4 TB to 2.2 TB through consolidation and five-year retention
+                            cleanup, then designed metadata and layered permissions for departmental, VIP, partner, and
+                            client content.</p>
+                        <p class="project-outcome">Created a controlled migration path with clearer governance, access
+                            separation, and reduced migration scope.</p>
+                    </div>
+                    <ul aria-label="Box-to-SharePoint architecture technologies" class="project-tags">
+                        <li>SharePoint</li>
+                        <li>3.4 TB to 2.2 TB</li>
+                        <li>Information architecture</li>
+                    </ul>
+                </article>
+                <article class="project"><span class="project-number">04</span>
+                    <div class="project-main">
+                        <h3>Backup, recovery &amp; incident response</h3>
+                        <p>Administer Veeam and Azure Recovery Services Vault protection, monitor failures, test
+                            restores, and maintain recovery documentation. Recovered a 30-file Engagement binder from an
+                            isolated VM snapshot within two hours before a tax deadline.</p>
+                        <p class="project-outcome">Protected deadline-sensitive work and established tested recovery
+                            procedures for critical accounting systems.</p>
+                    </div>
+                    <ul aria-label="Backup, recovery &amp; incident response technologies" class="project-tags">
+                        <li>Veeam</li>
+                        <li>Azure Backup</li>
+                        <li>Disaster recovery</li>
+                    </ul>
+                </article>
+                <article class="project"><span class="project-number">05</span>
+                    <div class="project-main">
+                        <h3>Security administration &amp; response</h3>
+                        <p>Administer SentinelOne policies, exclusions, isolation, remote commands, and investigations;
+                            respond to compromised Microsoft 365 accounts using session revocation, MFA reset, sign-in
+                            and audit-log review, and mailbox-rule inspection.</p>
+                        <p class="project-outcome">Contained malware attempting network discovery and prevented
+                            unauthorized account activity from becoming a larger incident.</p>
+                    </div>
+                    <ul aria-label="Security administration &amp; response technologies" class="project-tags">
+                        <li>SentinelOne</li>
+                        <li>Microsoft 365</li>
+                        <li>Incident response</li>
+                    </ul>
+                </article>
+                <article class="project"><span class="project-number">06</span>
+                    <div class="project-main">
+                        <h3>Cloud telephony deployment</h3>
+                        <p>Built a new AT&amp;T Office@Hand environment for approximately 65 users, including number
+                            assignments, call routing, auto attendant, receptionist workflows, SSO, mobile clients,
+                            conference rooms, and physical devices.</p>
+                        <p class="project-outcome">Avoided a costly Avaya platform upgrade while modernizing
+                            communications and remote-work support.</p>
+                    </div>
+                    <ul aria-label="Cloud telephony deployment technologies" class="project-tags">
+                        <li>Office@Hand</li>
+                        <li>SSO</li>
+                        <li>Telephony</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+        <!-- Homelab section: documents the architecture and operating practices used outside the production work environment. -->
+        <section class="homelab section-shell ruled-section" id="homelab">
+            <div class="section-label"><span>Homelab engineering</span><span>04</span></div>
+            <div class="homelab-heading">
+                <div>
+                    <p class="eyebrow">Infrastructure outside the job description</p>
+                    <h2>A production-minded lab built to fail safely.</h2>
+                </div>
+                <div class="prose">
+                    <p>I built a virtualized homelab to deepen my hands-on experience with Linux, containers,
+                        networking, centralized storage, automation, and recovery. Repurposed business hardware runs
+                        Proxmox, an Ubuntu Docker VM hosts core services, and a Synology NAS provides shared NFS
+                        storage.</p>
+                    <p>The useful part is not the service count. It is the operational discipline around them:
+                        validating dependencies before deployment, detecting storage failures, making maintenance
+                        repeatable, and restoring configurations without overwriting live systems blindly.</p>
+                </div>
+            </div>
+            <!-- Simple visual topology showing how the network edge, Proxmox host, Docker VM, and Synology storage connect. -->
+            <div aria-label="Homelab architecture" class="lab-topology">
+                <div class="topology-node">
+                    <span class="topology-step">01</span>
+                    <strong>Network edge</strong>
+                    <span>Router, firewall and trusted LAN</span>
+                </div>
+                <span aria-hidden="true" class="topology-arrow">→</span>
+                <div class="topology-node topology-node-accent">
+                    <span class="topology-step">02</span>
+                    <strong>Proxmox VE</strong>
+                    <span>Virtualization on repurposed business hardware</span>
+                </div>
+                <span aria-hidden="true" class="topology-arrow">→</span>
+                <div class="topology-node">
+                    <span class="topology-step">03</span>
+                    <strong>Ubuntu Docker VM</strong>
+                    <span>Compose-managed infrastructure services</span>
+                </div>
+                <span aria-hidden="true" class="topology-arrow">↔</span>
+                <div class="topology-node">
+                    <span class="topology-step">04</span>
+                    <strong>Synology NFS</strong>
+                    <span>Centralized persistent storage</span>
+                </div>
+            </div>
+            <!-- Supporting cards explain hosted services, the NFS failure-prevention design, and repeatable backup/recovery practices. -->
+            <div class="lab-details">
+                <article class="lab-card">
+                    <p class="lab-card-label">Core services</p>
+                    <h3>Self-hosted infrastructure</h3>
+                    <ul class="lab-service-list">
+                        <li><strong>Pi-hole</strong><span>Network-wide DNS filtering</span></li>
+                        <li><strong>Portainer</strong><span>Container administration</span></li>
+                        <li><strong>MeshCentral</strong><span>Trusted-network remote management</span></li>
+                        <li><strong>Uptime Kuma</strong><span>Service availability monitoring</span></li>
+                    </ul>
+                </article>
+                <article class="lab-card lab-card-dark">
+                    <p class="lab-card-label">Engineering decision</p>
+                    <h3>Preventing a silent storage failure</h3>
+                    <p>A missing NFS mount can leave a normal-looking local directory behind. Containers may then start
+                        successfully and write persistent data to the VM disk instead of the NAS.</p>
+                    <p>I turned that failure mode into a preflight gate that checks Docker, verifies the mount with
+                        <code>findmnt</code>, checks disk capacity, and fails deployment when dependencies are
+                        unavailable.</p>
+                </article>
+                <article class="lab-card lab-card-wide">
+                    <div>
+                        <p class="lab-card-label">Automation and recovery</p>
+                        <h3>Operations made repeatable</h3>
+                    </div>
+                    <ul class="practice-list">
+                        <li><span>Preflight</span>Validate Docker, NFS and free space before deployment</li>
+                        <li><span>Health</span>Report filesystem, mount, container and Docker storage status</li>
+                        <li><span>Backup</span>Archive configurations with SHA-256 verification</li>
+                        <li><span>Restore</span>Extract to a separate review location before touching live files</li>
+                        <li><span>Validation</span>Check shell syntax and Docker Compose through GitHub Actions</li>
+                    </ul>
+                </article>
+            </div>
+            <div class="lab-footer">
+                <ul aria-label="Homelab technologies" class="lab-tags">
+                    <li>Proxmox VE</li>
+                    <li>Ubuntu</li>
+                    <li>Docker Compose</li>
+                    <li>Synology NFS</li>
+                    <li>Bash</li>
+                    <li>GitHub Actions</li>
+                </ul>
+                <a class="button button-primary" href="https://github.com/jdiaz6421/Jonathan-Homelab"
+                    rel="noopener noreferrer" target="_blank">
+                    Explore the repository
+                    <svg aria-hidden="true" viewbox="0 0 24 24">
+                        <path d="M5 12h14M13 6l6 6-6 6"></path>
+                    </svg>
+                </a>
+            </div>
+        </section>
+        <!-- Capabilities section: grouped technical keywords for quick review by recruiters and hiring managers. -->
+        <section class="capabilities section-shell ruled-section" id="capabilities">
+            <div class="section-label"><span>Capabilities</span><span>05</span></div>
+            <div class="capability-grid">
+                <h2>Core technical capabilities</h2>
+                <dl>
+                    <div>
+                        <dt>Microsoft &amp; identity</dt>
+                        <dd>Microsoft 365 E3, Exchange Online, Entra ID, Active Directory, Group Policy, Conditional
+                            Access, MFA, Purview eDiscovery Standard, Content Search, retention, and mailbox holds</dd>
+                    </div>
+                    <div>
+                        <dt>Azure &amp; virtualization</dt>
+                        <dd>Azure Virtual Desktop, Azure VMs, VNets, subnets, NSGs, Recovery Services Vault, Azure
+                            Monitor, Log Analytics, VM Insights, Network Watcher, Nutanix Prism Central/Element, and
+                            Hyper-V</dd>
+                    </div>
+                    <div>
+                        <dt>Windows infrastructure</dt>
+                        <dd>Windows Server 2012/2019/2022, AD DS, DNS, DHCP, IIS, SMB file services, RDP, certificates,
+                            patching, storage, backups, Veeam, and disaster recovery</dd>
+                    </div>
+                    <div>
+                        <dt>Network &amp; security</dt>
+                        <dd>Meraki, Cisco switching, VLANs, trunks, spanning tree, port security, PoE, VPN, Wi-Fi,
+                            firewall rules, SecureW2, RADIUS, Cisco Firepower, SentinelOne, and BitLocker</dd>
+                    </div>
+                    <div>
+                        <dt>Operations &amp; tools</dt>
+                        <dd>PowerShell, Goverlan, ManageEngine Endpoint Central, Wireshark, IT Glue, vendor governance,
+                            procurement, licensing, documentation, CCH Axcess, Engagement, QuickBooks Enterprise,
+                            Karbon, and Box</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+        <!-- Certification section: only active or completed certification work should be listed here. -->
+        <section class="certifications section-shell ruled-section" id="certifications">
+            <div class="section-label"><span>Certification</span><span>06</span></div>
+            <div class="certification-grid">
+                <h2>Current development</h2>
+                <div class="certification-card">
+                    <p class="eyebrow">In progress</p>
+                    <h3>Cisco Certified Network Associate (CCNA)</h3>
+                    <p>Expected October 2026</p>
+                </div>
+            </div>
+        </section>
+        <!-- Contact section: direct email plus public LinkedIn and GitHub profiles. -->
+        <section class="contact section-shell" id="contact">
+            <p class="eyebrow">Let's talk</p>
+            <h2>Looking for a systems administrator who can own both the infrastructure and the outcome?</h2>
+            <div class="contact-links">
+                <a href="mailto:Diazjonathan6421@gmail.com">Diazjonathan6421@gmail.com <svg aria-hidden="true"
+                        viewbox="0 0 24 24">
+                        <path d="M5 12h14M13 6l6 6-6 6"></path>
+                    </svg></a>
+                <a href="https://www.linkedin.com/in/jonathan-diaz-it" rel="noopener noreferrer"
+                    target="_blank">LinkedIn <svg aria-hidden="true" viewbox="0 0 24 24">
+                        <path d="M5 12h14M13 6l6 6-6 6"></path>
+                    </svg></a>
+                <a href="https://github.com/jdiaz6421" rel="noopener noreferrer" target="_blank">GitHub <svg
+                        aria-hidden="true" viewbox="0 0 24 24">
+                        <path d="M5 12h14M13 6l6 6-6 6"></path>
+                    </svg></a>
+                <span>Miami, Florida</span>
+            </div>
+        </section>
+        <!-- Footer repeats the name and technical positioning used throughout the site. -->
+        <footer class="site-footer section-shell">
+            <span>Jonathan Diaz</span>
+            <span>Senior Systems Administrator | Microsoft 365 | Azure | Infrastructure</span>
+        </footer>
+    </main>
+</body>
 
-/* Top navigation and wordmark. */
-.site-header {
-  width: min(1240px, calc(100% - 64px));
-  height: 88px;
-  margin-inline: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--line);
-}
-.wordmark { font-size: 1.25rem; font-weight: 760; letter-spacing: -0.03em; }
-nav { display: flex; gap: 38px; }
-nav a { position: relative; font-size: 0.92rem; font-weight: 600; }
-nav a::after { content: ""; position: absolute; left: 50%; right: 50%; bottom: -9px; height: 2px; background: var(--teal); transition: left .18s ease, right .18s ease; }
-nav a:hover::after, nav a:focus-visible::after { left: 0; right: 0; }
-
-/* Hero layout, headline, action buttons, and career fact row. */
-.hero { min-height: 710px; display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(370px, .88fr); gap: 86px; align-items: center; padding-block: 76px 84px; }
-.availability { display: flex; align-items: center; gap: 10px; margin: 0 0 44px; color: var(--navy-soft); font-size: .9rem; font-weight: 600; }
-.availability span { width: 9px; height: 9px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 5px rgba(18,184,169,.1); }
-.eyebrow { margin: 0 0 20px; color: var(--teal-dark); font-size: .76rem; font-weight: 750; letter-spacing: .19em; text-transform: uppercase; }
-h1, h2, h3, p { margin-top: 0; }
-h1 { max-width: 760px; margin-bottom: 26px; font-size: clamp(3.25rem, 5.35vw, 5rem); line-height: .99; letter-spacing: -.06em; font-weight: 760; }
-.hero-summary { max-width: 660px; margin-bottom: 30px; color: var(--slate); font-size: 1.15rem; line-height: 1.65; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
-.button { min-height: 52px; padding: 0 22px; display: inline-flex; align-items: center; justify-content: center; gap: 14px; border: 1px solid var(--teal); border-radius: 7px; font-size: .94rem; font-weight: 680; transition: transform .18s ease, background .18s ease, color .18s ease, box-shadow .18s ease; }
-.button:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(10,27,54,.1); }
-.button-primary { background: var(--teal); color: #fff; }
-.button-primary:hover { background: var(--teal-dark); }
-.button-secondary:hover { background: #e3f6f2; }
-.hero-facts { display: grid; grid-template-columns: .82fr .82fr 1.36fr; margin: 52px 0 0; border-top: 1px solid var(--line); }
-.hero-facts div { padding: 18px 20px 0 0; }
-.hero-facts div + div { padding-left: 22px; border-left: 1px solid var(--line); }
-.hero-facts dt { margin-bottom: 7px; color: var(--slate); font-size: .72rem; letter-spacing: .13em; text-transform: uppercase; }
-.hero-facts dd { margin: 0; font-size: 1rem; font-weight: 730; }
-
-/* Profile image treatment, decorative background, and caption card. */
-.portrait-wrap { position: relative; width: min(100%, var(--portrait-size)); justify-self: end; align-self: center; display: flex; align-items: center; }
-.portrait-backdrop { position: absolute; inset: 28px -22px 18px 34px; border-radius: 8px; background: var(--navy); }
-.portrait-backdrop::before, .portrait-backdrop::after { content: ""; position: absolute; border: 1px solid rgba(18,184,169,.58); }
-.portrait-backdrop::before { inset: 32px -17px 32px 30px; }
-.portrait-backdrop::after { width: 84px; right: -34px; top: 75px; border-width: 1px 0 0; box-shadow: 0 12px 0 rgba(18,184,169,.58), 0 24px 0 rgba(18,184,169,.58); }
-.portrait { position: relative; z-index: 1; display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: center; border-radius: 8px; filter: saturate(.94) contrast(1.02); }
-.portrait-caption { position: absolute; z-index: 2; left: -28px; bottom: 28px; max-width: 240px; margin: 0; padding: 15px 18px; background: var(--paper); border-left: 3px solid var(--teal); color: var(--navy); font-size: .82rem; font-weight: 650; line-height: 1.4; }
-
-/* Shared section spacing, section labels, and two-column content grids. */
-.ruled-section { padding-block: 108px; border-top: 1px solid var(--line); }
-.section-label { display: flex; justify-content: space-between; margin-bottom: 58px; color: var(--slate); font-size: .72rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
-.about-grid, .experience-grid, .capability-grid { display: grid; grid-template-columns: minmax(280px, .85fr) minmax(0, 1.15fr); gap: 100px; }
-.about h2, .projects h2, .capabilities h2, .contact h2 { margin: 0; font-size: clamp(2.25rem, 3.75vw, 3.7rem); line-height: 1.04; letter-spacing: -.05em; font-weight: 720; }
-.prose { color: var(--slate); font-size: 1.08rem; line-height: 1.78; }
-.prose p + p { margin-top: 24px; }
-
-/* Experience section typography and responsibility list. */
-.experience-date { margin-bottom: 14px; color: var(--teal-dark); font-size: .78rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
-.experience h2 { margin-bottom: 9px; font-size: clamp(2rem, 3vw, 3rem); line-height: 1.05; letter-spacing: -.045em; }
-.company { color: var(--slate); }
-.responsibilities { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
-.responsibilities li { position: relative; padding: 19px 0 19px 28px; border-bottom: 1px solid var(--line); color: var(--slate); line-height: 1.55; }
-.responsibilities li::before { content: ""; position: absolute; top: 27px; left: 2px; width: 8px; height: 2px; background: var(--teal); }
-
-/* Selected project list. Desktop layout uses number, project details, and tags in separate columns. */
-.projects-intro { max-width: 780px; margin-bottom: 72px; }
-.projects-intro p { margin: 20px 0 0; color: var(--slate); font-size: 1.05rem; }
-.project { display: grid; grid-template-columns: 70px minmax(0, 1fr) 220px; gap: 34px; padding: 36px 0; border-top: 1px solid var(--line); }
-.project:last-child { border-bottom: 1px solid var(--line); }
-.project-number { color: var(--teal-dark); font-size: .78rem; font-weight: 750; letter-spacing: .12em; }
-.project h3 { margin-bottom: 14px; font-size: clamp(1.35rem, 2vw, 1.8rem); letter-spacing: -.03em; }
-.project-main > p { max-width: 720px; margin-bottom: 12px; color: var(--slate); line-height: 1.65; }
-.project-main .project-outcome { margin-bottom: 0; color: var(--navy); font-weight: 650; }
-.project-tags { margin: 0; padding: 0; list-style: none; color: var(--slate); font-size: .78rem; line-height: 2; text-align: right; }
-
-/* Technical capabilities list. */
-.capability-grid dl { margin: 0; }
-.capability-grid dl > div { display: grid; grid-template-columns: 180px 1fr; gap: 28px; padding: 22px 0; border-top: 1px solid var(--line); }
-.capability-grid dl > div:last-child { border-bottom: 1px solid var(--line); }
-.capability-grid dt { font-weight: 700; text-transform: capitalize; }
-.capability-grid dd { margin: 0; color: var(--slate); line-height: 1.65; }
-
-/* Contact links and footer. */
-.contact { padding-block: 120px 112px; }
-.contact h2 { max-width: 990px; }
-.contact-links { display: grid; grid-template-columns: 1.45fr .55fr .55fr .65fr; gap: 32px; margin-top: 68px; padding-top: 24px; border-top: 1px solid var(--line); }
-.contact-links a, .contact-links span { display: flex; justify-content: space-between; align-items: center; font-size: .95rem; font-weight: 650; }
-.contact-links a:hover { color: var(--teal-dark); }
-.site-footer { display: flex; justify-content: space-between; padding-block: 24px 38px; border-top: 1px solid var(--line); color: var(--slate); font-size: .75rem; }
-
-/* Keyboard focus treatment and optional entry animation. */
-a:focus-visible { outline: 2px solid var(--teal-dark); outline-offset: 4px; }
-@media (prefers-reduced-motion: no-preference) {
-  .hero-copy > * { animation: rise .55s both; }
-  .hero-copy > *:nth-child(2) { animation-delay: .05s; }
-  .hero-copy > *:nth-child(3) { animation-delay: .1s; }
-  .hero-copy > *:nth-child(4) { animation-delay: .15s; }
-  .hero-copy > *:nth-child(5) { animation-delay: .2s; }
-  .portrait-wrap { animation: rise .65s .12s both; }
-  @keyframes rise { from { opacity: 0; transform: translateY(12px); } }
-}
-
-/* Tablet layout: stack major grids and move project tags below each project. */
-@media (max-width: 900px) {
-  .section-shell, .site-header { width: min(100% - 40px, 720px); }
-  nav { gap: 20px; }
-  .hero { grid-template-columns: 1fr; gap: 62px; padding-top: 58px; }
-  .portrait-wrap { width: min(100%, var(--portrait-size)); justify-self: center; }
-  .about-grid, .experience-grid, .capability-grid { grid-template-columns: 1fr; gap: 48px; }
-  .project { grid-template-columns: 52px 1fr; }
-  .project-tags { grid-column: 2; display: flex; flex-wrap: wrap; gap: 7px 18px; text-align: left; }
-  .contact-links { grid-template-columns: 1fr; }
-}
-
-/* Mobile layout: simplify navigation, stack buttons, and reduce section spacing. */
-@media (max-width: 640px) {
-  .section-shell, .site-header { width: calc(100% - 40px); }
-  .site-header { height: 72px; }
-  nav a { display: none; }
-  nav a:last-child { display: block; }
-  .hero { padding-block: 52px 68px; }
-  .availability { margin-bottom: 34px; font-size: .8rem; }
-  h1 { font-size: clamp(2.75rem, 13vw, 4rem); }
-  .hero-actions { flex-direction: column; align-items: stretch; }
-  .hero-facts { grid-template-columns: 1fr 1fr; }
-  .hero-facts div:nth-child(3) { grid-column: 1 / -1; padding-left: 0; margin-top: 18px; border-left: 0; }
-  .portrait-wrap { width: min(90%, var(--portrait-size)); }
-  .portrait-backdrop { inset: 24px -8px 12px 24px; }
-  .portrait-caption { left: -8px; bottom: 20px; }
-  .ruled-section { padding-block: 78px; }
-  .section-label { margin-bottom: 42px; }
-  .project { grid-template-columns: 34px 1fr; gap: 16px; padding-block: 30px; }
-  .capability-grid dl > div { grid-template-columns: 1fr; gap: 9px; }
-  .contact { padding-block: 86px; }
-  .contact-links { margin-top: 46px; }
-  .site-footer { flex-direction: column; gap: 8px; }
-}
-
-
-/* Certification section added to keep the website aligned with the current resume. */
-.certification-grid { display: grid; grid-template-columns: minmax(280px, .85fr) minmax(0, 1.15fr); gap: 100px; align-items: start; }
-.certification-grid > h2 { margin: 0; font-size: clamp(2.25rem, 3.75vw, 3.7rem); line-height: 1.04; letter-spacing: -.05em; font-weight: 720; }
-.certification-card { padding: 28px 30px; border: 1px solid var(--line); background: var(--paper); border-left: 4px solid var(--teal); }
-.certification-card h3 { margin-bottom: 8px; font-size: 1.45rem; letter-spacing: -.025em; }
-.certification-card p:last-child { margin-bottom: 0; color: var(--slate); }
-@media (max-width: 900px) { .certification-grid { grid-template-columns: 1fr; gap: 48px; } }
-
-.hero-facts div { padding: 18px 20px 0 0; }
-.hero-facts div + div { padding-left: 22px; border-left: 1px solid var(--line); }
-.hero-facts dt { margin-bottom: 7px; color: var(--slate); font-size: .72rem; letter-spacing: .13em; text-transform: uppercase; }
-.hero-facts dd { margin: 0; font-size: 1rem; font-weight: 730; }
-
-/* Profile image treatment, decorative background, and caption card. */
-.portrait-wrap { position: relative; width: min(100%, var(--portrait-size)); justify-self: end; align-self: center; display: flex; align-items: center; }
-.portrait-backdrop { position: absolute; inset: 28px -22px 18px 34px; border-radius: 8px; background: var(--navy); }
-.portrait-backdrop::before, .portrait-backdrop::after { content: ""; position: absolute; border: 1px solid rgba(18,184,169,.58); }
-.portrait-backdrop::before { inset: 32px -17px 32px 30px; }
-.portrait-backdrop::after { width: 84px; right: -34px; top: 75px; border-width: 1px 0 0; box-shadow: 0 12px 0 rgba(18,184,169,.58), 0 24px 0 rgba(18,184,169,.58); }
-.portrait { position: relative; z-index: 1; display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: center; border-radius: 8px; filter: saturate(.94) contrast(1.02); }
-.portrait-caption { position: absolute; z-index: 2; left: -28px; bottom: 28px; max-width: 240px; margin: 0; padding: 15px 18px; background: var(--paper); border-left: 3px solid var(--teal); color: var(--navy); font-size: .82rem; font-weight: 650; line-height: 1.4; }
-
-/* Shared section spacing, section labels, and two-column content grids. */
-.ruled-section { padding-block: 108px; border-top: 1px solid var(--line); }
-.section-label { display: flex; justify-content: space-between; margin-bottom: 58px; color: var(--slate); font-size: .72rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
-.about-grid, .experience-grid, .capability-grid { display: grid; grid-template-columns: minmax(280px, .85fr) minmax(0, 1.15fr); gap: 100px; }
-.about h2, .projects h2, .capabilities h2, .contact h2 { margin: 0; font-size: clamp(2.25rem, 3.75vw, 3.7rem); line-height: 1.04; letter-spacing: -.05em; font-weight: 720; }
-.prose { color: var(--slate); font-size: 1.08rem; line-height: 1.78; }
-.prose p + p { margin-top: 24px; }
-
-/* Experience section typography and responsibility list. */
-.experience-date { margin-bottom: 14px; color: var(--teal-dark); font-size: .78rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
-.experience h2 { margin-bottom: 9px; font-size: clamp(2rem, 3vw, 3rem); line-height: 1.05; letter-spacing: -.045em; }
-.company { color: var(--slate); }
-.responsibilities { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
-.responsibilities li { position: relative; padding: 19px 0 19px 28px; border-bottom: 1px solid var(--line); color: var(--slate); line-height: 1.55; }
-.responsibilities li::before { content: ""; position: absolute; top: 27px; left: 2px; width: 8px; height: 2px; background: var(--teal); }
-
-/* Selected project list. Desktop layout uses number, project details, and tags in separate columns. */
-.projects-intro { max-width: 780px; margin-bottom: 72px; }
-.projects-intro p { margin: 20px 0 0; color: var(--slate); font-size: 1.05rem; }
-.project { display: grid; grid-template-columns: 70px minmax(0, 1fr) 220px; gap: 34px; padding: 36px 0; border-top: 1px solid var(--line); }
-.project:last-child { border-bottom: 1px solid var(--line); }
-.project-number { color: var(--teal-dark); font-size: .78rem; font-weight: 750; letter-spacing: .12em; }
-.project h3 { margin-bottom: 14px; font-size: clamp(1.35rem, 2vw, 1.8rem); letter-spacing: -.03em; }
-.project-main > p { max-width: 720px; margin-bottom: 12px; color: var(--slate); line-height: 1.65; }
-.project-main .project-outcome { margin-bottom: 0; color: var(--navy); font-weight: 650; }
-.project-tags { margin: 0; padding: 0; list-style: none; color: var(--slate); font-size: .78rem; line-height: 2; text-align: right; }
-
-/* Technical capabilities list. */
-.capability-grid dl { margin: 0; }
-.capability-grid dl > div { display: grid; grid-template-columns: 180px 1fr; gap: 28px; padding: 22px 0; border-top: 1px solid var(--line); }
-.capability-grid dl > div:last-child { border-bottom: 1px solid var(--line); }
-.capability-grid dt { font-weight: 700; text-transform: capitalize; }
-.capability-grid dd { margin: 0; color: var(--slate); line-height: 1.65; }
-
-/* Contact links and footer. */
-.contact { padding-block: 120px 112px; }
-.contact h2 { max-width: 990px; }
-.contact-links { display: grid; grid-template-columns: 1.45fr .55fr .55fr .65fr; gap: 32px; margin-top: 68px; padding-top: 24px; border-top: 1px solid var(--line); }
-.contact-links a, .contact-links span { display: flex; justify-content: space-between; align-items: center; font-size: .95rem; font-weight: 650; }
-.contact-links a:hover { color: var(--teal-dark); }
-.site-footer { display: flex; justify-content: space-between; padding-block: 24px 38px; border-top: 1px solid var(--line); color: var(--slate); font-size: .75rem; }
-
-/* Keyboard focus treatment and optional entry animation. */
-a:focus-visible { outline: 2px solid var(--teal-dark); outline-offset: 4px; }
-@media (prefers-reduced-motion: no-preference) {
-  .hero-copy > * { animation: rise .55s both; }
-  .hero-copy > *:nth-child(2) { animation-delay: .05s; }
-  .hero-copy > *:nth-child(3) { animation-delay: .1s; }
-  .hero-copy > *:nth-child(4) { animation-delay: .15s; }
-  .hero-copy > *:nth-child(5) { animation-delay: .2s; }
-  .portrait-wrap { animation: rise .65s .12s both; }
-  @keyframes rise { from { opacity: 0; transform: translateY(12px); } }
-}
-
-/* Tablet layout: stack major grids and move project tags below each project. */
-@media (max-width: 900px) {
-  .section-shell, .site-header { width: min(100% - 40px, 720px); }
-  nav { gap: 20px; }
-  .hero { grid-template-columns: 1fr; gap: 62px; padding-top: 58px; }
-  .portrait-wrap { width: min(100%, var(--portrait-size)); justify-self: center; }
-  .about-grid, .experience-grid, .capability-grid { grid-template-columns: 1fr; gap: 48px; }
-  .project { grid-template-columns: 52px 1fr; }
-  .project-tags { grid-column: 2; display: flex; flex-wrap: wrap; gap: 7px 18px; text-align: left; }
-  .contact-links { grid-template-columns: 1fr; }
-}
-
-/* Mobile layout: simplify navigation, stack buttons, and reduce section spacing. */
-@media (max-width: 640px) {
-  .section-shell, .site-header { width: calc(100% - 40px); }
-  .site-header { height: 72px; }
-  nav a { display: none; }
-  nav a:last-child { display: block; }
-  .hero { padding-block: 52px 68px; }
-  .availability { margin-bottom: 34px; font-size: .8rem; }
-  h1 { font-size: clamp(2.75rem, 13vw, 4rem); }
-  .hero-actions { flex-direction: column; align-items: stretch; }
-  .hero-facts { grid-template-columns: 1fr 1fr; }
-  .hero-facts div:nth-child(3) { grid-column: 1 / -1; padding-left: 0; margin-top: 18px; border-left: 0; }
-  .portrait-wrap { width: min(90%, var(--portrait-size)); }
-  .portrait-backdrop { inset: 24px -8px 12px 24px; }
-  .portrait-caption { left: -8px; bottom: 20px; }
-  .ruled-section { padding-block: 78px; }
-  .section-label { margin-bottom: 42px; }
-  .project { grid-template-columns: 34px 1fr; gap: 16px; padding-block: 30px; }
-  .capability-grid dl > div { grid-template-columns: 1fr; gap: 9px; }
-  .contact { padding-block: 86px; }
-  .contact-links { margin-top: 46px; }
-  .site-footer { flex-direction: column; gap: 8px; }
-}
-
-
-/* Certification section added to keep the website aligned with the current resume. */
-.certification-grid { display: grid; grid-template-columns: minmax(280px, .85fr) minmax(0, 1.15fr); gap: 100px; align-items: start; }
-.certification-grid > h2 { margin: 0; font-size: clamp(2.25rem, 3.75vw, 3.7rem); line-height: 1.04; letter-spacing: -.05em; font-weight: 720; }
-.certification-card { padding: 28px 30px; border: 1px solid var(--line); background: var(--paper); border-left: 4px solid var(--teal); }
-.certification-card h3 { margin-bottom: 8px; font-size: 1.45rem; letter-spacing: -.025em; }
-.certification-card p:last-child { margin-bottom: 0; color: var(--slate); }
-@media (max-width: 900px) { .certification-grid { grid-template-columns: 1fr; gap: 48px; } }
+</html>
