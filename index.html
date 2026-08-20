@@ -1,399 +1,428 @@
 <!DOCTYPE html>
-
-<!-- Main portfolio page for Jonathan Diaz. The page is organized as a single-scroll site with sections for experience, projects, homelab work, technical capabilities, certifications, and contact information. -->
-
 <html lang="en">
-
 <head>
-    <!-- Basic page metadata, browser color, favicon, and the external stylesheet used by the site. -->
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta
-        content="Jonathan Diaz is a Systems Administrator and hands-on IT Manager specializing in Microsoft 365, Azure, Windows Server, infrastructure, security, and IT operations."
-        name="description" />
-    <meta content="#f6f3eb" name="theme-color" />
-    <title>Jonathan Diaz | Systems Administrator</title>
-    <link href="./favicon.svg" rel="icon" type="image/svg+xml" />
-    <link href="./styles.css" rel="stylesheet" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Jonathan Diaz is a Systems Engineer specializing in Azure, Windows Server, Microsoft 365, Active Directory, Azure Virtual Desktop, networking, virtualization, security, and hybrid infrastructure."
+  />
+  <meta name="theme-color" content="#f6f3eb" />
+  <title>Jonathan Diaz | Systems Engineer</title>
+  <link href="./favicon.svg" rel="icon" type="image/svg+xml" />
+  <link href="./styles.css" rel="stylesheet" />
 </head>
-
 <body>
-    <!-- All visible content is contained inside the main landmark for accessibility and simple navigation. -->
-    <main>
-        <!-- Sticky-style top navigation and site wordmark. Links jump to sections on the same page. -->
-        <header class="site-header">
-            <a aria-label="Jonathan Diaz, home" class="wordmark" href="#top">Jonathan Diaz</a>
-            <nav aria-label="Primary navigation">
-                <a href="#about">About</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#homelab">Homelab</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </header>
-        <!-- Hero section: primary positioning statement, resume download, career highlights, and profile image. -->
-        <section class="hero section-shell" id="top">
-            <div class="hero-copy">
-                <p class="availability"><span></span> Miami, FL | Open to systems and infrastructure roles</p>
-                <p class="eyebrow">Systems Administrator | Microsoft 365 | Azure | Infrastructure</p>
-                <h1>I build, secure, and simplify the systems businesses depend on.</h1>
-                <p class="hero-summary">Hands-on systems administrator and IT operations owner supporting 75 users
-                    across the United States and India. Focused on Microsoft 365, Azure, Windows infrastructure,
-                    security administration, recovery, and measurable business outcomes.</p>
-                <!-- Primary calls to action: view projects or download the resume PDF stored in the site root. -->
-                <div class="hero-actions">
-                    <a class="button button-primary" href="#projects">
-                        View selected work
-                        <svg aria-hidden="true" viewbox="0 0 24 24">
-                            <path d="M5 12h14M13 6l6 6-6 6"></path>
-                        </svg>
-                    </a>
-                    <a class="button button-secondary" download="" href="./Resume.pdf">
-                        Download Resume
-                        <svg aria-hidden="true" viewbox="0 0 24 24">
-                            <path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14"></path>
-                        </svg>
-                    </a>
-                </div>
-                <!-- Quick facts are marked up as a definition list so the labels and values stay semantically connected. -->
-                <dl aria-label="Career highlights" class="hero-facts">
-                    <div>
-                        <dt>Experience</dt>
-                        <dd>4+ years</dd>
-                    </div>
-                    <div>
-                        <dt>Environment</dt>
-                        <dd>75 users</dd>
-                    </div>
-                    <div>
-                        <dt>Annual savings</dt>
-                        <dd>$128.4K</dd>
-                    </div>
-                </dl>
-            </div>
-            <div class="portrait-wrap">
-                <div aria-hidden="true" class="portrait-backdrop"></div>
-                <img alt="Jonathan Diaz in professional attire" class="portrait" fetchpriority="high" height="1254"
-                    src="./jonathan-diaz-enhanced.jpg" width="1254" />
-                <p class="portrait-caption">Infrastructure that works. Ownership that is clear.</p>
-            </div>
-        </section>
-        <!-- About section: short summary of the environment supported and the balance between hands-on work and operational ownership. -->
-        <section class="about section-shell ruled-section" id="about">
-            <div class="section-label"><span>About</span><span>01</span></div>
-            <div class="about-grid">
-                <h2>Direct technical execution with operational ownership.</h2>
-                <div class="prose">
-                    <p>I serve as the sole internal IT owner for a 75-user CPA firm spanning Coral Gables and India. I
-                        directly administer Microsoft 365, Azure, Active Directory, Windows Server, Azure Virtual
-                        Desktop, networking, endpoint security, backups, and business-critical accounting systems.</p>
-                    <p>My role combines hands-on engineering with technical decision-making: building production
-                        systems, resolving escalated incidents, governing MSP work, validating changes, documenting the
-                        environment, and preventing avoidable cost or risk.</p>
-                </div>
-            </div>
-        </section>
-        <!-- Experience section: current role, scope of responsibility, and the systems directly administered. -->
-        <section class="experience section-shell ruled-section" id="experience">
-            <div class="section-label"><span>Experience</span><span>02</span></div>
-            <div class="experience-grid">
-                <div>
-                    <p class="experience-date">January 2022 - Present</p>
-                    <h2>IT Manager | Systems Administrator</h2>
-                    <p class="company">HLB Gravier LLP | Coral Gables, Florida</p>
-                </div>
-                <ul class="responsibilities">
-                    <li>Own day-to-day IT operations for 75 active users across the United States and India, supporting
-                        approximately 75 Windows laptops, 15 servers, printers, conference-room systems, and
-                        business-critical applications.</li>
-                    <li>Administer 15 Azure VMs, including five Azure Virtual Desktop session hosts, seven application
-                        servers, two domain controllers, and one file server, with responsibility for networking, NSGs,
-                        storage, backups, monitoring, applications, and optimization.</li>
-                    <li>Administer Microsoft 365 E3, Exchange Online, Entra ID, Conditional Access, MFA, Purview
-                        eDiscovery, Active Directory, Group Policy, Windows Server, DNS, DHCP, IIS, and
-                        certificate-based access.</li>
-                    <li>Serve as the primary escalation point for major incidents, direct MSP priorities, validate
-                        completed work, and coordinate approximately 20 software vendors plus telecom and hardware
-                        providers.</li>
-                    <li>Maintain IT Glue documentation covering 341 passwords, 76 documents, and 257 configurations,
-                        including diagrams, inventories, runbooks, recovery procedures, renewals, and change plans.</li>
-                </ul>
-            </div>
-        </section>
-        <!-- Selected projects section: measurable infrastructure, migration, recovery, security, and telephony work. -->
-        <section class="projects section-shell ruled-section" id="projects">
-            <div class="section-label"><span>Selected work</span><span>03</span></div>
-            <div class="projects-intro">
-                <h2>Selected infrastructure and operations results.</h2>
-                <p>Projects where technical implementation, risk control, and business impact mattered.</p>
-            </div>
-            <!-- Each project uses the same structure: project number, description and outcome, followed by a short technology tag list. -->
-            <div class="project-list">
-                <article class="project"><span class="project-number">01</span>
-                    <div class="project-main">
-                        <h3>Azure infrastructure migration &amp; legacy retirement</h3>
-                        <p>Built and migrated seven production workloads to Azure, retired seven legacy VMs, and
-                            replaced one platform with SaaS. Configured VMs, disks, VNets, subnets, NSGs, domain
-                            integration, backups, monitoring, applications, and cutover.</p>
-                        <p class="project-outcome">Reduced legacy infrastructure and helped eliminate $128,400 in annual
-                            recurring technology costs across Zscaler, Nutanix, Right Networks, and Duo.</p>
-                    </div>
-                    <ul aria-label="Azure infrastructure migration &amp; legacy retirement technologies"
-                        class="project-tags">
-                        <li>Azure VMs</li>
-                        <li>Windows Server</li>
-                        <li>Cost reduction</li>
-                    </ul>
-                </article>
-                <article class="project"><span class="project-number">02</span>
-                    <div class="project-main">
-                        <h3>Azure Virtual Desktop engineering</h3>
-                        <p>Created host pools, workspaces, application groups, session hosts, Entra groups, user
-                            assignments, networking, Conditional Access, monitoring, backups, and application
-                            deployments for production and isolated client-access use cases.</p>
-                        <p class="project-outcome">Resolved an AVD capacity issue affecting five users and corrected a
-                            stale resource assignment without unnecessary endpoint changes.</p>
-                    </div>
-                    <ul aria-label="Azure Virtual Desktop engineering technologies" class="project-tags">
-                        <li>Azure Virtual Desktop</li>
-                        <li>Entra ID</li>
-                        <li>Conditional Access</li>
-                    </ul>
-                </article>
-                <article class="project"><span class="project-number">03</span>
-                    <div class="project-main">
-                        <h3>Box-to-SharePoint architecture</h3>
-                        <p>Own information architecture and migration planning for Tax, Audit, Admin, and IT. Reduced
-                            the source dataset from 3.4 TB to 2.2 TB through consolidation and five-year retention
-                            cleanup, then designed metadata and layered permissions for departmental, VIP, partner, and
-                            client content.</p>
-                        <p class="project-outcome">Created a controlled migration path with clearer governance, access
-                            separation, and reduced migration scope.</p>
-                    </div>
-                    <ul aria-label="Box-to-SharePoint architecture technologies" class="project-tags">
-                        <li>SharePoint</li>
-                        <li>3.4 TB to 2.2 TB</li>
-                        <li>Information architecture</li>
-                    </ul>
-                </article>
-                <article class="project"><span class="project-number">04</span>
-                    <div class="project-main">
-                        <h3>Backup, recovery &amp; incident response</h3>
-                        <p>Administer Veeam and Azure Recovery Services Vault protection, monitor failures, test
-                            restores, and maintain recovery documentation. Recovered a 30-file Engagement binder from an
-                            isolated VM snapshot within two hours before a tax deadline.</p>
-                        <p class="project-outcome">Protected deadline-sensitive work and established tested recovery
-                            procedures for critical accounting systems.</p>
-                    </div>
-                    <ul aria-label="Backup, recovery &amp; incident response technologies" class="project-tags">
-                        <li>Veeam</li>
-                        <li>Azure Backup</li>
-                        <li>Disaster recovery</li>
-                    </ul>
-                </article>
-                <article class="project"><span class="project-number">05</span>
-                    <div class="project-main">
-                        <h3>Security administration &amp; response</h3>
-                        <p>Administer SentinelOne policies, exclusions, isolation, remote commands, and investigations;
-                            respond to compromised Microsoft 365 accounts using session revocation, MFA reset, sign-in
-                            and audit-log review, and mailbox-rule inspection.</p>
-                        <p class="project-outcome">Contained malware attempting network discovery and prevented
-                            unauthorized account activity from becoming a larger incident.</p>
-                    </div>
-                    <ul aria-label="Security administration &amp; response technologies" class="project-tags">
-                        <li>SentinelOne</li>
-                        <li>Microsoft 365</li>
-                        <li>Incident response</li>
-                    </ul>
-                </article>
-                <article class="project"><span class="project-number">06</span>
-                    <div class="project-main">
-                        <h3>Cloud telephony deployment</h3>
-                        <p>Built a new AT&amp;T Office@Hand environment for approximately 65 users, including number
-                            assignments, call routing, auto attendant, receptionist workflows, SSO, mobile clients,
-                            conference rooms, and physical devices.</p>
-                        <p class="project-outcome">Avoided a costly Avaya platform upgrade while modernizing
-                            communications and remote-work support.</p>
-                    </div>
-                    <ul aria-label="Cloud telephony deployment technologies" class="project-tags">
-                        <li>Office@Hand</li>
-                        <li>SSO</li>
-                        <li>Telephony</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
-        <!-- Homelab section: documents the architecture and operating practices used outside the production work environment. -->
-        <section class="homelab section-shell ruled-section" id="homelab">
-            <div class="section-label"><span>Homelab engineering</span><span>04</span></div>
-            <div class="homelab-heading">
-                <div>
-                    <p class="eyebrow">Infrastructure outside the job description</p>
-                    <h2>A production-minded lab built to fail safely.</h2>
-                </div>
-                <div class="prose">
-                    <p>I built a virtualized homelab to deepen my hands-on experience with Linux, containers,
-                        networking, centralized storage, automation, and recovery. Repurposed business hardware runs
-                        Proxmox, an Ubuntu Docker VM hosts core services, and a Synology NAS provides shared NFS
-                        storage.</p>
-                    <p>The useful part is not the service count. It is the operational discipline around them:
-                        validating dependencies before deployment, detecting storage failures, making maintenance
-                        repeatable, and restoring configurations without overwriting live systems blindly.</p>
-                </div>
-            </div>
-            <!-- Simple visual topology showing how the network edge, Proxmox host, Docker VM, and Synology storage connect. -->
-            <div aria-label="Homelab architecture" class="lab-topology">
-                <div class="topology-node">
-                    <span class="topology-step">01</span>
-                    <strong>Network edge</strong>
-                    <span>Router, firewall and trusted LAN</span>
-                </div>
-                <span aria-hidden="true" class="topology-arrow">→</span>
-                <div class="topology-node topology-node-accent">
-                    <span class="topology-step">02</span>
-                    <strong>Proxmox VE</strong>
-                    <span>Virtualization on repurposed business hardware</span>
-                </div>
-                <span aria-hidden="true" class="topology-arrow">→</span>
-                <div class="topology-node">
-                    <span class="topology-step">03</span>
-                    <strong>Ubuntu Docker VM</strong>
-                    <span>Compose-managed infrastructure services</span>
-                </div>
-                <span aria-hidden="true" class="topology-arrow">↔</span>
-                <div class="topology-node">
-                    <span class="topology-step">04</span>
-                    <strong>Synology NFS</strong>
-                    <span>Centralized persistent storage</span>
-                </div>
-            </div>
-            <!-- Supporting cards explain hosted services, the NFS failure-prevention design, and repeatable backup/recovery practices. -->
-            <div class="lab-details">
-                <article class="lab-card">
-                    <p class="lab-card-label">Core services</p>
-                    <h3>Self-hosted infrastructure</h3>
-                    <ul class="lab-service-list">
-                        <li><strong>Pi-hole</strong><span>Network-wide DNS filtering</span></li>
-                        <li><strong>Portainer</strong><span>Container administration</span></li>
-                        <li><strong>MeshCentral</strong><span>Trusted-network remote management</span></li>
-                        <li><strong>Uptime Kuma</strong><span>Service availability monitoring</span></li>
-                    </ul>
-                </article>
-                <article class="lab-card lab-card-dark">
-                    <p class="lab-card-label">Engineering decision</p>
-                    <h3>Preventing a silent storage failure</h3>
-                    <p>A missing NFS mount can leave a normal-looking local directory behind. Containers may then start
-                        successfully and write persistent data to the VM disk instead of the NAS.</p>
-                    <p>I turned that failure mode into a preflight gate that checks Docker, verifies the mount with
-                        <code>findmnt</code>, checks disk capacity, and fails deployment when dependencies are
-                        unavailable.</p>
-                </article>
-                <article class="lab-card lab-card-wide">
-                    <div>
-                        <p class="lab-card-label">Automation and recovery</p>
-                        <h3>Operations made repeatable</h3>
-                    </div>
-                    <ul class="practice-list">
-                        <li><span>Preflight</span>Validate Docker, NFS and free space before deployment</li>
-                        <li><span>Health</span>Report filesystem, mount, container and Docker storage status</li>
-                        <li><span>Backup</span>Archive configurations with SHA-256 verification</li>
-                        <li><span>Restore</span>Extract to a separate review location before touching live files</li>
-                        <li><span>Validation</span>Check shell syntax and Docker Compose through GitHub Actions</li>
-                    </ul>
-                </article>
-            </div>
-            <div class="lab-footer">
-                <ul aria-label="Homelab technologies" class="lab-tags">
-                    <li>Proxmox VE</li>
-                    <li>Ubuntu</li>
-                    <li>Docker Compose</li>
-                    <li>Synology NFS</li>
-                    <li>Bash</li>
-                    <li>GitHub Actions</li>
-                </ul>
-                <a class="button button-primary" href="https://github.com/jdiaz6421/Jonathan-Homelab"
-                    rel="noopener noreferrer" target="_blank">
-                    Explore the repository
-                    <svg aria-hidden="true" viewbox="0 0 24 24">
-                        <path d="M5 12h14M13 6l6 6-6 6"></path>
-                    </svg>
-                </a>
-            </div>
-        </section>
-        <!-- Capabilities section: grouped technical keywords for quick review by recruiters and hiring managers. -->
-        <section class="capabilities section-shell ruled-section" id="capabilities">
-            <div class="section-label"><span>Capabilities</span><span>05</span></div>
-            <div class="capability-grid">
-                <h2>Core technical capabilities</h2>
-                <dl>
-                    <div>
-                        <dt>Microsoft &amp; identity</dt>
-                        <dd>Microsoft 365 E3, Exchange Online, Entra ID, Active Directory, Group Policy, Conditional
-                            Access, MFA, Purview eDiscovery Standard, Content Search, retention, and mailbox holds</dd>
-                    </div>
-                    <div>
-                        <dt>Azure &amp; virtualization</dt>
-                        <dd>Azure Virtual Desktop, Azure VMs, VNets, subnets, NSGs, Recovery Services Vault, Azure
-                            Monitor, Log Analytics, VM Insights, Network Watcher, Nutanix Prism Central/Element, and
-                            Hyper-V</dd>
-                    </div>
-                    <div>
-                        <dt>Windows infrastructure</dt>
-                        <dd>Windows Server 2012/2019/2022, AD DS, DNS, DHCP, IIS, SMB file services, RDP, certificates,
-                            patching, storage, backups, Veeam, and disaster recovery</dd>
-                    </div>
-                    <div>
-                        <dt>Network &amp; security</dt>
-                        <dd>Meraki, Cisco switching, VLANs, trunks, spanning tree, port security, PoE, VPN, Wi-Fi,
-                            firewall rules, SecureW2, RADIUS, Cisco Firepower, SentinelOne, and BitLocker</dd>
-                    </div>
-                    <div>
-                        <dt>Operations &amp; tools</dt>
-                        <dd>PowerShell, Goverlan, ManageEngine Endpoint Central, Wireshark, IT Glue, vendor governance,
-                            procurement, licensing, documentation, CCH Axcess, Engagement, QuickBooks Enterprise,
-                            Karbon, and Box</dd>
-                    </div>
-                </dl>
-            </div>
-        </section>
-        <!-- Certification section: only active or completed certification work should be listed here. -->
-        <section class="certifications section-shell ruled-section" id="certifications">
-            <div class="section-label"><span>Certification</span><span>06</span></div>
-            <div class="certification-grid">
-                <h2>Current development</h2>
-                <div class="certification-card">
-                    <p class="eyebrow">In progress</p>
-                    <h3>Cisco Certified Network Associate (CCNA)</h3>
-                    <p>Expected October 2026</p>
-                </div>
-            </div>
-        </section>
-        <!-- Contact section: direct email plus public LinkedIn and GitHub profiles. -->
-        <section class="contact section-shell" id="contact">
-            <p class="eyebrow">Let's talk</p>
-            <h2>Looking for a systems administrator who can own both the infrastructure and the outcome?</h2>
-            <div class="contact-links">
-                <a href="mailto:Diazjonathan6421@gmail.com">Diazjonathan6421@gmail.com <svg aria-hidden="true"
-                        viewbox="0 0 24 24">
-                        <path d="M5 12h14M13 6l6 6-6 6"></path>
-                    </svg></a>
-                <a href="https://www.linkedin.com/in/jonathan-diaz-it" rel="noopener noreferrer"
-                    target="_blank">LinkedIn <svg aria-hidden="true" viewbox="0 0 24 24">
-                        <path d="M5 12h14M13 6l6 6-6 6"></path>
-                    </svg></a>
-                <a href="https://github.com/jdiaz6421" rel="noopener noreferrer" target="_blank">GitHub <svg
-                        aria-hidden="true" viewbox="0 0 24 24">
-                        <path d="M5 12h14M13 6l6 6-6 6"></path>
-                    </svg></a>
-                <span>Miami, Florida</span>
-            </div>
-        </section>
-        <!-- Footer repeats the name and technical positioning used throughout the site. -->
-        <footer class="site-footer section-shell">
-            <span>Jonathan Diaz</span>
-            <span> Systems Administrator | Microsoft 365 | Azure | Infrastructure</span>
-        </footer>
-    </main>
-</body>
+  <main>
+    <header class="site-header">
+      <a aria-label="Jonathan Diaz, home" class="wordmark" href="#top">Jonathan Diaz</a>
+      <nav aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#labs">Labs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
+    <section class="hero section-shell" id="top">
+      <div class="hero-copy">
+        <p class="availability"><span></span> Relocating to Washington, DC Metro Area</p>
+        <p class="eyebrow">Systems Engineer | Azure | Windows Server | Microsoft 365 | Infrastructure</p>
+        <h1>I engineer and operate the infrastructure businesses depend on.</h1>
+        <p class="hero-summary">
+          Hands-on systems engineer with 4+ years of experience supporting hybrid Microsoft environments across
+          Windows Server, Active Directory, Azure, Azure Virtual Desktop, Microsoft 365, networking, virtualization,
+          backup, and endpoint security. I build and migrate production systems, troubleshoot complex failures, and
+          modernize infrastructure without losing operational control.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">
+            View selected work
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </a>
+          <a class="button button-secondary" download href="./Resume.pdf">
+            Download Resume
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14"></path></svg>
+          </a>
+        </div>
+
+        <dl aria-label="Career highlights" class="hero-facts">
+          <div>
+            <dt>Experience</dt>
+            <dd>4+ years</dd>
+          </div>
+          <div>
+            <dt>Infrastructure</dt>
+            <dd>~15 Azure VMs</dd>
+          </div>
+          <div>
+            <dt>Environment</dt>
+            <dd>75 active users</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="portrait-wrap">
+        <div aria-hidden="true" class="portrait-backdrop"></div>
+        <img
+          alt="Jonathan Diaz in professional attire"
+          class="portrait"
+          fetchpriority="high"
+          height="1254"
+          src="./jonathan-diaz-enhanced.jpg"
+          width="1254"
+        />
+        <p class="portrait-caption">Hybrid infrastructure. Production ownership. Practical engineering.</p>
+      </div>
+    </section>
+
+    <section class="about section-shell ruled-section" id="about">
+      <div class="section-label"><span>About</span><span>01</span></div>
+      <div class="about-grid">
+        <h2>Systems engineering grounded in production operations.</h2>
+        <div class="prose">
+          <p>
+            I support a hybrid Microsoft environment for 75 active users across the United States and India. My work
+            spans Windows Server, Active Directory, DNS, DHCP, Group Policy, Azure VMs, Azure Virtual Desktop,
+            Microsoft 365, Entra ID, networking, virtualization, backup, monitoring, and endpoint security.
+          </p>
+          <p>
+            I work across the full infrastructure lifecycle: planning changes, building and migrating systems,
+            validating dependencies, troubleshooting incidents, recovering production workloads, documenting the
+            environment, and coordinating MSP and vendor work when outside support is required.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience section-shell ruled-section" id="experience">
+      <div class="section-label"><span>Experience</span><span>02</span></div>
+      <div class="experience-grid">
+        <div>
+          <p class="experience-date">January 2022 - Present</p>
+          <h2>Systems Administrator / IT Manager</h2>
+          <p class="company">HLB Gravier LLP | Coral Gables, Florida</p>
+        </div>
+
+        <ul class="responsibilities">
+          <li>
+            Administer approximately 15 Azure VMs: five AVD session hosts, seven application servers, two domain
+            controllers, and one file server across compute, storage, VNets, subnets, NSGs, monitoring, backups,
+            application deployment, and resource optimization.
+          </li>
+          <li>
+            Administer Windows Server 2012/2019/2022, Active Directory, DNS, DHCP, Group Policy, file services, IIS,
+            certificates, service accounts, patching, replication, FSMO roles, Sites and Services, trusts, and AD health checks.
+          </li>
+          <li>
+            Built and migrated seven production workloads to Azure, retired seven legacy VMs, and replaced one platform
+            with SaaS while executing implementation, cutover, validation, and transition to ongoing support.
+          </li>
+          <li>
+            Engineer and support Azure Virtual Desktop host pools, workspaces, application groups, session hosts,
+            Entra groups, networking, Conditional Access, monitoring, backups, and application deployments.
+          </li>
+          <li>
+            Administer Microsoft 365 E3 and Exchange Online for approximately 75 users, including transport rules,
+            anti-spam, shared mailboxes, aliases, forwarding, connectors, distribution groups, retention, and message tracing.
+          </li>
+          <li>
+            Configure Meraki firewalls and Cisco switching across VPN, wireless, VLANs, trunks, spanning tree, port
+            security, PoE, filtering, alerts, firmware, and network troubleshooting.
+          </li>
+          <li>
+            Serve as the primary escalation point for major incidents across approximately 75 Windows laptops, 15
+            servers, printers, conference-room systems, and business-critical applications.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="projects section-shell ruled-section" id="projects">
+      <div class="section-label"><span>Selected work</span><span>03</span></div>
+      <div class="projects-intro">
+        <h2>Systems infrastructure built, migrated, recovered, and kept running.</h2>
+        <p>Production work across Windows, Azure, virtualization, identity, recovery, and infrastructure lifecycle management.</p>
+      </div>
+
+      <div class="project-list">
+        <article class="project">
+          <span class="project-number">01</span>
+          <div class="project-main">
+            <h3>Azure infrastructure migration & legacy retirement</h3>
+            <p>
+              Built and migrated seven production workloads to Azure, retired seven legacy VMs, and replaced one
+              platform with SaaS. Configured compute, disks, VNets, subnets, NSGs, domain integration, backups,
+              monitoring, applications, and production cutover.
+            </p>
+            <p class="project-outcome">
+              Modernized the environment while helping eliminate approximately $128,400 in annual recurring technology costs.
+            </p>
+          </div>
+          <ul aria-label="Azure infrastructure migration technologies" class="project-tags">
+            <li>Azure VMs</li>
+            <li>Windows Server</li>
+            <li>VNets / NSGs</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <span class="project-number">02</span>
+          <div class="project-main">
+            <h3>Windows Server & Active Directory administration</h3>
+            <p>
+              Maintain Windows Server services across Active Directory, DNS, DHCP, Group Policy, file services, IIS,
+              certificates, service accounts, replication, FSMO roles, Sites and Services, trusts, and domain health checks.
+            </p>
+            <p class="project-outcome">
+              Provide the identity, policy, name-resolution, and server foundation supporting the hybrid production environment.
+            </p>
+          </div>
+          <ul aria-label="Windows infrastructure technologies" class="project-tags">
+            <li>Windows Server</li>
+            <li>Active Directory</li>
+            <li>DNS / GPO</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <span class="project-number">03</span>
+          <div class="project-main">
+            <h3>Azure Virtual Desktop engineering & capacity recovery</h3>
+            <p>
+              Engineer and support AVD host pools, workspaces, application groups, session hosts, Entra groups, user
+              assignments, networking, Conditional Access, monitoring, backups, and application deployments.
+            </p>
+            <p class="project-outcome">
+              Resolved a production capacity issue affecting five users by increasing available hosts from 8 to 12 and correcting a stale resource assignment.
+            </p>
+          </div>
+          <ul aria-label="Azure Virtual Desktop technologies" class="project-tags">
+            <li>Azure Virtual Desktop</li>
+            <li>Entra ID</li>
+            <li>Monitoring</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <span class="project-number">04</span>
+          <div class="project-main">
+            <h3>Nutanix / Hyper-V infrastructure</h3>
+            <p>
+              Administered a standalone Nutanix appliance running Hyper-V with approximately 15 VMs and 120 TB of
+              usable storage. Managed VM lifecycle, storage, virtual and physical networking, snapshots, restores,
+              alerts, firmware, platform upgrades, and Hyper-V upgrades.
+            </p>
+            <p class="project-outcome">
+              Maintained the legacy virtualization platform through its lifecycle while production workloads were modernized and migrated.
+            </p>
+          </div>
+          <ul aria-label="Virtualization technologies" class="project-tags">
+            <li>Nutanix</li>
+            <li>Hyper-V</li>
+            <li>120 TB storage</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <span class="project-number">05</span>
+          <div class="project-main">
+            <h3>Backup, recovery & production troubleshooting</h3>
+            <p>
+              Administer Veeam, Iron Mountain, and Azure Recovery Services Vault protection. Restored an isolated VM
+              snapshot and recovered an uncorrupted 30-file Engagement binder within two hours before a tax deadline.
+            </p>
+            <p class="project-outcome">
+              Recovered deadline-sensitive production data without overwriting the damaged source environment.
+            </p>
+          </div>
+          <ul aria-label="Backup and recovery technologies" class="project-tags">
+            <li>Veeam</li>
+            <li>Azure Backup</li>
+            <li>Recovery</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <span class="project-number">06</span>
+          <div class="project-main">
+            <h3>Windows reliability & security incident response</h3>
+            <p>
+              Remediated a Windows compatibility issue affecting approximately 25 users, repaired endpoints, paused
+              deployment through Group Policy, and coordinated the broader corrective change. Separately investigated
+              malicious and false-positive endpoint security events through SentinelOne.
+            </p>
+            <p class="project-outcome">
+              Reduced production disruption while preserving controlled rollout, endpoint security, and recovery paths.
+            </p>
+          </div>
+          <ul aria-label="Windows reliability technologies" class="project-tags">
+            <li>Group Policy</li>
+            <li>SentinelOne</li>
+            <li>Incident response</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="labs section-shell ruled-section" id="labs">
+      <div class="section-label"><span>Engineering labs</span><span>04</span></div>
+      <div class="labs-heading">
+        <div>
+          <p class="eyebrow">Hands-on engineering outside production</p>
+          <h2>Labs that extend the same infrastructure fundamentals.</h2>
+        </div>
+        <div class="prose">
+          <p>
+            My lab work is deliberately infrastructure-focused: Azure provisioning, Windows Server, networking,
+            monitoring, virtualization, storage, automation, validation, and recovery. Terraform and Linux are tools in
+            that work, not the center of my professional positioning.
+          </p>
+        </div>
+      </div>
+
+      <div class="lab-project-grid">
+        <article class="engineering-card engineering-card-featured">
+          <div class="engineering-card-topline">
+            <span>Azure infrastructure</span>
+            <span>Terraform</span>
+          </div>
+          <h3>Modular Azure environment built as Infrastructure as Code</h3>
+          <p>
+            Built a modular Azure environment using reusable networking, compute, security, and monitoring modules.
+            Provisioned VNets, subnets, NSGs, Windows Server, Key Vault, managed identities, Log Analytics, Azure
+            Monitor Agent, Data Collection Rules, and RBAC-based access.
+          </p>
+          <p>
+            Added GitHub Actions validation for Terraform formatting and configuration checks to make infrastructure changes repeatable and testable.
+          </p>
+          <ul class="lab-tags" aria-label="Terraform lab technologies">
+            <li>Azure</li>
+            <li>Windows Server</li>
+            <li>Terraform</li>
+            <li>VNets / NSGs</li>
+            <li>Azure Monitor</li>
+            <li>GitHub Actions</li>
+          </ul>
+          <a class="text-link" href="https://github.com/jdiaz6421/Terraform-Lab" rel="noopener noreferrer" target="_blank">
+            View Terraform-Lab repository
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </a>
+        </article>
+
+        <article class="engineering-card">
+          <div class="engineering-card-topline">
+            <span>Virtualization & self-hosting</span>
+            <span>Homelab</span>
+          </div>
+          <h3>Production-minded virtualization, containers, storage, and recovery</h3>
+          <p>
+            Designed and documented a self-hosted lab using Proxmox VE, Ubuntu, Docker Compose, Synology NFS,
+            Pi-hole, Portainer, MeshCentral, and Uptime Kuma.
+          </p>
+          <p>
+            Built Bash preflight checks to prevent containers from writing to local disk when NFS storage is unavailable,
+            added health checks and SHA-256-verified configuration backups, and validate shell syntax and Docker Compose with GitHub Actions.
+          </p>
+          <ul class="lab-tags" aria-label="Homelab technologies">
+            <li>Proxmox VE</li>
+            <li>Synology NFS</li>
+            <li>Docker Compose</li>
+            <li>Networking</li>
+            <li>Monitoring</li>
+            <li>Recovery</li>
+          </ul>
+          <a class="text-link" href="https://github.com/jdiaz6421/Jonathan-Homelab" rel="noopener noreferrer" target="_blank">
+            View homelab repository
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="capabilities section-shell ruled-section" id="capabilities">
+      <div class="section-label"><span>Capabilities</span><span>05</span></div>
+      <div class="capability-grid">
+        <h2>Core technical capabilities</h2>
+        <dl>
+          <div>
+            <dt>Windows Server & identity</dt>
+            <dd>
+              Windows Server 2012/2019/2022, AD DS, Active Directory, Microsoft Entra ID, Group Policy, DNS, DHCP,
+              IIS, SMB file services, RDP, certificates, service accounts, replication, FSMO roles, Sites and Services, and trusts
+            </dd>
+          </div>
+          <div>
+            <dt>Azure & virtualization</dt>
+            <dd>
+              Azure VMs, Azure Virtual Desktop, host pools, workspaces, application groups, VNets, subnets, NSGs,
+              Recovery Services Vault, Azure Monitor, Log Analytics, VM Insights, Network Watcher, Activity Log,
+              Hyper-V, and Nutanix Prism Central/Element
+            </dd>
+          </div>
+          <div>
+            <dt>Microsoft 365 & security</dt>
+            <dd>
+              Microsoft 365 E3, Exchange Online, Conditional Access, MFA, Purview eDiscovery Standard, Content Search,
+              retention, mailbox holds, SentinelOne, BitLocker, Barracuda, and account-compromise response
+            </dd>
+          </div>
+          <div>
+            <dt>Networking & infrastructure</dt>
+            <dd>
+              Meraki firewalls, Cisco switching, VLANs, trunks, spanning tree, port security, PoE, VPN, Wi-Fi, RADIUS,
+              SecureW2, Cisco Firepower, storage, patching, Veeam, backup, and disaster recovery
+            </dd>
+          </div>
+          <div>
+            <dt>Automation & operations</dt>
+            <dd>
+              PowerShell, Terraform, Infrastructure as Code, GitHub Actions, production logon scripts, Goverlan,
+              ManageEngine Endpoint Central, Wireshark, IT Glue, monitoring, troubleshooting, documentation, and MSP/vendor coordination
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="certifications section-shell ruled-section" id="certifications">
+      <div class="section-label"><span>Certification</span><span>06</span></div>
+      <div class="certification-grid">
+        <h2>Current development</h2>
+        <div class="certification-card">
+          <p class="eyebrow">In progress</p>
+          <h3>Cisco Certified Network Associate (CCNA)</h3>
+          <p>Expected October 2026</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section-shell" id="contact">
+      <p class="eyebrow">Contact</p>
+      <h2>Looking for a systems engineer who can work across Windows, Azure, Microsoft 365, and infrastructure?</h2>
+      <div class="contact-links">
+        <a href="mailto:Diazjonathan6421@gmail.com">
+          Diazjonathan6421@gmail.com
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/jonathan-diaz-it" rel="noopener noreferrer" target="_blank">
+          LinkedIn
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </a>
+        <a href="https://github.com/jdiaz6421" rel="noopener noreferrer" target="_blank">
+          GitHub
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </a>
+        <span>Relocating to Washington, DC Metro</span>
+      </div>
+    </section>
+
+    <footer class="site-footer section-shell">
+      <span>Jonathan Diaz</span>
+      <span>Systems Engineer | Azure | Windows Server | Microsoft 365 | Infrastructure</span>
+    </footer>
+  </main>
+</body>
 </html>
